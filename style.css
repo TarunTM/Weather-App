@@ -1,0 +1,254 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Merriweather Sans", sans-serif;
+}
+
+:root{
+    --colorDark1: #112D4E;
+    --colorDark2: #3F72AF;
+    --colorLight1: #DBE2EF;
+    --colorLight2: #F9F7F7;
+}
+
+#wrapper{
+    width: 100vw;
+    height: 100vh;
+    color: var(--colorLight2);
+    background-image: linear-gradient(160deg,#112d4e 0%,#3f72af 100%);
+}
+
+h1{
+    text-align: center;
+    padding-top: 30px;
+    letter-spacing: 2px;
+}
+
+/* switch tab */
+
+.tab-container{
+    width: 90%;
+    max-width:550px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-top: 4rem;
+}
+
+.tab{
+    cursor: pointer;
+    font-size: 0.875rem;
+    letter-spacing: 1.75px;
+    padding: 5px 8px;
+}
+
+.tab.current-tab{
+     background-color: rgba(219, 226, 239, 0.5);
+     border-radius: 4px;
+}
+
+.weather-container{
+    margin-block: 4rem;
+}
+
+/* grant access  */
+
+.grant-location-container{
+    display: none;
+}
+
+.grant-location-container.active{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.grant-location-container p:first-of-type{
+    font-size: 1.75rem;
+    font-weight: 600;
+    padding-top: 20px;
+}
+
+.grant-location-container p:last-of-type{
+    font-size: 0.85rem;
+    font-weight: 300;
+    letter-spacing: 0.75px;
+}
+
+.btn{
+    all: unset; /*border: none;  all unset removes defalut property*/ 
+    font-size: 0.85rem;
+    border-radius: 5px;
+    background-color: var(--colorDark2);
+    cursor: pointer;
+    padding: 10px 30px;
+    color: var(--colorLight2);
+    margin-top: 20px;
+}
+
+/* loading gif */
+.loading-container{
+    display: none;
+}
+
+.loading-container.active{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading-container p{
+    text-transform: uppercase;
+    text-align: center ;
+}
+
+/* weather container */
+
+.user-info-container{
+    display: none;
+}
+
+.user-info-container.active{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-info-container p{
+    font-size: 1.5rem;
+    font-weight: 200;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.user-info-container img{
+    height: 90px;
+    width: 90px;
+    
+}
+
+.user-info-container p[data-temp]{
+    font-size: 2.75rem;
+    font-weight: 700;
+}
+
+.name{
+    display: flex;
+    gap: 0 0.5rem;
+    margin-bottom: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.name p{
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+.name img{
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+.parameter-container{
+    width: 90%;
+    display: flex;
+    gap: 10px 20px;
+    margin-top: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.parameter{
+    background-color: rgba(219, 226, 239, 0.5);
+    width: 30%;
+    max-width: 200px;
+    border-radius: 5px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px 0;
+}
+
+.parameter img{
+    width: 50px;
+    height: 50px;
+}
+
+.parameter p:first-of-type{
+    font-size: 1.5rem;
+    font-weight: 200;
+
+}
+
+.parameter p:last-of-type{
+    font-size: 1.25rem;
+    font-weight: 200;
+}
+
+/* search box */
+
+.form-container{
+    display: none;
+}
+
+.form-container.active{
+    width: 90%;
+    max-width: 550px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0 10px;
+    margin-bottom: 3rem;
+    margin: 0 auto;
+}
+
+.form-container input{
+    cursor: pointer;
+    width: calc(100% - 80px);
+    height: 40px;
+    padding: 0 20px;
+    background-color: rgba(219, 226, 239, 0.5);
+    border-radius: 10px;
+    border: none;
+    margin-bottom: 3rem;
+    color: rgba(255 ,255 ,255, 0.7);
+}
+
+.form-container input::placeholder{
+    color: rgba(255 ,255 ,255, 0.7);
+    font-size: 1rem;
+}
+
+.form-container input:focus{
+    outline: 3px solid rgba(255 ,255 ,255, 0.7);
+}
+
+.form-container button{
+    
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background-color: var(--colorDark2);
+    border: none;
+    margin-bottom: 3rem;
+}
+
+/* error container */
+
+.error404-container{
+    display: none;
+}
+
+.error404-container.active{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
